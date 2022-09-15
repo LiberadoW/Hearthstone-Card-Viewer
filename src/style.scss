@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1500px;
+    justify-content: center;
+
+    div.card {
+        width: 300px;
+
+        img {
+            width: 300px;
+        }
+    }
+
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    padding: 30px;
+}
