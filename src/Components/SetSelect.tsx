@@ -4,17 +4,23 @@ const setNames: string[] = ["Core", "Forged in the Barrens" ,"United in Stormwin
 
 type Props = {
   setName: string;
-  setSetName: Function;
-  setPlayerClassName: Function;
+  setSetName: React.Dispatch<React.SetStateAction<string>>;
+  playerClassName: string;
+  setPlayerClassName: React.Dispatch<React.SetStateAction<string>>;
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const SetSelect = ({ setName, setSetName,setPlayerClassName }: Props) => {
+const SetSelect = ({ setName, setSetName,playerClassName,setPlayerClassName,setCurrentPage}: Props) => {
   const handleOnChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSetName(event.target.value);
-    setPlayerClassName("All")
+    if (playerClassName === "") {
+      setPlayerClassName("All classes")
+    }
+    setCurrentPage(1)
   };
   return (
-    <div>
+    <div className="set-select-container">
+      <label htmlFor="set-select">Choose set:</label>
       <select
         onChange={handleOnChange}
         name="set-select"

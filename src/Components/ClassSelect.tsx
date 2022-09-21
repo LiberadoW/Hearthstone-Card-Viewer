@@ -1,22 +1,43 @@
 import { ChangeEvent } from "react";
 
-const classNames:string[] = ["All","Druid","Hunter","Mage","Paladin","Priest","Rogue","Shaman","Warlock","Warrior","Neutral","Demon Hunter"];
+const classNames: string[] = [
+  "All classes",
+  "Druid",
+  "Hunter",
+  "Mage",
+  "Paladin",
+  "Priest",
+  "Rogue",
+  "Shaman",
+  "Warlock",
+  "Warrior",
+  "Neutral",
+  "Demon Hunter",
+];
 
 type Props = {
-    playerClassName: string;
-    setPlayerClassName: Function;
+  playerClassName: string;
+  setPlayerClassName: React.Dispatch<React.SetStateAction<string>>;
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const ClassSelect = ({
+  playerClassName,
+  setPlayerClassName,
+  setCurrentPage,
+}: Props) => {
+  const handleOnChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setPlayerClassName(event.target.value);
+    setCurrentPage(1);
   };
 
-const ClassSelect = ({playerClassName,setPlayerClassName}:Props) => {
-    const handleOnChange = (event: ChangeEvent<HTMLSelectElement>) => {
-        setPlayerClassName(event.target.value);
-      };
-return (
-<div>
+  return (
+    <div className="class-select-container">
+      <label htmlFor="class-select">Choose class:</label>
       <select
         onChange={handleOnChange}
-        name="set-select"
-        id="set-select"
+        name="class-select"
+        id="class-select"
         value={playerClassName}
       >
         <option value="" disabled>
@@ -31,7 +52,7 @@ return (
         })}
       </select>
     </div>
-)
-}
+  );
+};
 
-export default ClassSelect
+export default ClassSelect;

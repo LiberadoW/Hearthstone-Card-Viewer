@@ -1,25 +1,84 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.site {
+  background-image: url("../public/woodtexture.jpg");
+  min-height: 100vh;
+}
+
+.main-content {
+  background-color: #fdfdfd;
+  margin: 0 auto;
+  max-width: 1250px;
+  box-shadow: rgba(0, 0, 0, 0.5) 12px 3px 8px;
+  min-height: 100vh;
 }
 
 .cards {
+  background-color: #fdfdfd;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1250px;
   justify-content: center;
+  padding: 10px;
 }
 .cards div.card {
-  width: 300px;
+  width: 240px;
 }
 .cards div.card img {
-  width: 300px;
+  width: 240px;
+  filter: drop-shadow(4px 4px 4px black);
 }
 
 .select-container {
+  background-color: #8b0000;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  max-width: 1500px;
-  padding: 30px;
+  align-items: center;
+  gap: 10px;
+  max-width: 1250px;
+  padding: 10px;
+  margin: 0 auto;
+  top: 0;
+  flex-wrap: wrap;
+}
+.select-container div {
+  display: flex;
+  gap: 5px;
+}
+
+.flex-dummy {
+  display: inline-block;
+  width: 250px;
+}
+
+.loader-container {
+  display: flex;
+  height: calc(100vh - 40px);
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: white;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
