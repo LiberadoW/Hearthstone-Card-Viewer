@@ -8,8 +8,6 @@ import FilterCards from "./FilterCards";
 import { ClipLoader } from "react-spinners";
 import CardObject from "../Functions/CardObject";
 
-
-
 function App() {
   const [setName, setSetName] = useState("");
   const [playerClassName, setPlayerClassName] = useState("");

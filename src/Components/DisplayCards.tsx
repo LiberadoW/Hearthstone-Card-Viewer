@@ -31,7 +31,6 @@ const DisplayCards = ({
   });
   const [filteredCards, setFilteredCards] = useState(cards);
 
-  console.log(cards)
 
 
   useEffect(() => {
@@ -53,7 +52,7 @@ const DisplayCards = ({
 
   return (
     <>
-    <CardsPagination setCurrentPage={setCurrentPage} filteredCards={filteredCards} pageSize={pageSize}  currentPage={currentPage}/>
+    {cards.length !==0 && <CardsPagination setCurrentPage={setCurrentPage} filteredCards={filteredCards} pageSize={pageSize}  currentPage={currentPage}/>}
       <div className="cards">
         {slicedsortedFilteredCards.map((card: CardObject) => {
           return (

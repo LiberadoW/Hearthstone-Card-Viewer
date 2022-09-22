@@ -6,6 +6,10 @@ type CardObject = {
     playerClass: string;
     name: string;
     flavor: string;
+    artist: string;
+    type: string;
+    cardSet: string;
+    rarity: string;
   };
 
   export default CardObject

@@ -32,6 +32,7 @@
 .cards div.card img {
   width: 240px;
   filter: drop-shadow(4px 4px 4px black);
+  cursor: pointer;
 }
 
 .select-container {
@@ -74,11 +75,68 @@
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
+  max-width: 640px;
   background-color: white;
   display: flex;
+}
+.modal .modal-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+.modal .modal-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.modal .modal-img img {
+  filter: drop-shadow(4px 4px 4px black);
+  padding: 10px;
+  max-width: 300px;
+}
+.modal .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  flex: 1;
+  justify-content: center;
+}
+.modal .card-info p:nth-of-type(1) {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.modal .card-info p:nth-of-type(2) {
+  font-style: italic;
+}
+.modal .card-info p span {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    max-width: 320px;
+    flex-direction: column;
+  }
+  .modal img {
+    width: 240px;
+    padding: 0px;
+  }
+  .modal .card-info {
+    font-size: 0.8rem;
+  }
+  .modal .card-info p:nth-of-type(1) {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }/*# sourceMappingURL=style.css.map */
